@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Group_Div {
     public static void main(String[] args){
         if(args.length != 0 && args.length == 3){
+           if(isNumeric(args[0])){
 
+           }
             reading_file(args[1]);
             reading_file(args[2]);
 
@@ -17,6 +19,7 @@ public class Group_Div {
     }
 
     public static void reading_file(String path){
+        int counter = 0;
         try {
             //Reading files from path in the second arg
             File myFile = new File(path);
@@ -29,6 +32,18 @@ public class Group_Div {
         }catch (FileNotFoundException e){
             System.out.println("Error:" + e);
         }
+    }
+
+    public static boolean isNumeric(String num) {
+        if (num == null) {
+            return false;
+        }
+        try {
+            int n = Integer.parseInt(num);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
     }
 
     public static void group_num(int n){
