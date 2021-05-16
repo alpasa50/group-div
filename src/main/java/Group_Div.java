@@ -49,5 +49,9 @@ public class Group_Div {
     public static void group_num(int n){
         //Todo
     }
+
+
+    //Todo
+    //public static void ranomizer(){}
 }
 
